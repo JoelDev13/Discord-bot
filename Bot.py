@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from webserver import keep_alive
 from settings.config import DISCORD_TOKEN
 
 # aqui Configuramos los permisos que necesita el bot
@@ -20,4 +21,5 @@ async def main():
         await bot.start(DISCORD_TOKEN)  # Inicia sesion con el token
 
 import asyncio
+keep_alive()
 asyncio.run(main()) 
