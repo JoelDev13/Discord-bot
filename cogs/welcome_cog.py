@@ -8,13 +8,6 @@ class WelcomeCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        # Aqui se asigna automaticamente un rol especifico al nuevo miembro
-        role = member.guild.get_role(WELCOME_AUTO_ROLE_ID)
-        if role:
-            try:
-                await member.add_roles(role)  # Añade el rol al usuario que se unió
-            except Exception as e:
-                print(f"No pude asignar el rol automático: {e}")  #en caso de error Captura  el error si no puede asignar el rol
 
         # aqui obtengp el canal donde se enviara el mensaje de bienvenida
         channel = member.guild.get_channel(WELCOME_CHANNEL_ID)
