@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from settings.config import WELCOME_CHANNEL_ID, RULES_CHANNEL_ID, WELCOME_AUTO_ROLE_ID
+from settings.config import WELCOME_CHANNEL_ID, RULES_CHANNEL_ID
 
 class WelcomeCog(commands.Cog):
     def __init__(self, bot):
